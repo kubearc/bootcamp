@@ -17,7 +17,7 @@ pipeline {
         stage('Checkout Code') {
             steps {
                 // Replace with your actual repo URL
-                git branch: 'main', url: 'https://github.com/your-username/netflix-clone.git'
+                git branch: 'main', url: 'https://github.com/kaybee-singh/netflix-clone'
             }
         }
 
@@ -26,7 +26,7 @@ pipeline {
                 script {
                     echo "Building Docker Image locally..."
                     // We build with a local tag to avoid registry dependencies
-                    sh "docker build -t ${IMAGE_NAME} ."
+                    sh "docker build -t ${IMAGE_NAME} -f Containerfile ."
                 }
             }
         }
