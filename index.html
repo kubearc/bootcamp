@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kubearc DevOps Demo</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 400px;
+      width: 90%;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    .badge {
+      background: #00c853;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      display: inline-block;
+      margin-bottom: 15px;
+    }
+
+    button {
+      padding: 12px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background: #ff9800;
+      color: white;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+
+    button:active {
+      transform: scale(0.95);
+    }
+
+    .version {
+      margin-top: 20px;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>🚀 Kubearc</h1>
+    <div class="badge">Live DevOps Demo</div>
+
+    <p>This app is running on a cloud server.</p>
+    <p id="message">Version 1 - Welcome Students!</p>
+
+    <button onclick="changeText()">Click Me</button>
+
+    <div class="version">
+      Updated at: <span id="time"></span>
+    </div>
+  </div>
+
+  <script>
+    function changeText() {
+      document.getElementById("message").innerText = "🔥 You clicked the button!";
+    }
+
+    document.getElementById("time").innerText = new Date().toLocaleTimeString();
+  </script>
+</body>
+</html>
